@@ -1,6 +1,7 @@
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Header from './components/Header';
+import { Container } from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
@@ -11,13 +12,12 @@ const useStyles = makeStyles({
 });
 
 function App() {
-
   const classes = useStyles();
 
   return (
-    <div className={`App ${classes.root}`}>
+    <Container maxWidth={false} disableGutters={true} className={`App ${classes.root}`}>
       <Header />
-    </div>
+    </Container>
   );
 }
 
