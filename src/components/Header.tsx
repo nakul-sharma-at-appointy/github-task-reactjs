@@ -66,10 +66,14 @@ const useStyles = makeStyles((theme: Theme) =>
             padding: "5px 10px",
             borderRadius: "40%",
             fontSize: "12px",
-            fontWeight: 500
+            fontWeight: 550
         },
         lowerBoxActionItemsActive: {
-            borderBottom: "2px solid #fd8c73"
+            borderBottom: "2px solid #fd8c73",
+            fontWeight: 600
+        },
+        lowerBoxActionItemsActiveTypography: {
+            fontWeight: 600
         },
         lowerBoxActionItemsName: {
             fontSize: "14px"
@@ -235,7 +239,7 @@ const Header = () => {
                                 </path>
                             </SvgIcon>
 
-                            <Typography className={classes.lowerBoxActionItemsName}>
+                            <Typography className={`${classes.lowerBoxActionItemsName} ${item.isActive && classes.lowerBoxActionItemsActiveTypography}`}>
                                 {item.name}
                             </Typography>
 
